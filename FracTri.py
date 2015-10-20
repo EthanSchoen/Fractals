@@ -31,9 +31,9 @@ def main():
     screen.fill((0,0,0))
 
     #Initialize Fractal
-    pygame.draw.lines(screen, (255,255,255), True, ([350,454], [600,100], [850,454]), 3)
+    triangle = ([150,654], [600,100], [1050,454])
+    pygame.draw.lines(screen, (255,255,255), True, triangle,3)
     triSide = 500
-    triangle = ([350,454], [600,100], [850,454])
     i = 1    
     maxV = False
 
@@ -43,7 +43,7 @@ def main():
                 pygame.quit()
                 sys.exit()
         
-        if i < 6:
+        if i < 7:
             i += 1
         else:
             maxV = True
