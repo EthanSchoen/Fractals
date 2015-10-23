@@ -30,10 +30,10 @@ def main():
     screen.fill((0,0,0))
 
     #Initialize Fractal
-    triangle = ([350,454], [600,100], [850,454])
+    triangle = ([250,574], [600,20], [950,574])
     pygame.draw.lines(screen, (255,255,255), True, triangle,3)
     triSide = 500
-    i = 1    
+    i = 0
     maxV = False
 
     while True:
@@ -41,13 +41,14 @@ def main():
             if event.type == pygame.QUIT:
                 pygame.quit()
                 sys.exit()
-        
+        pygame.display.update()
         if i < 7:
             i += 1
         else:
             maxV = True
 
         if not maxV:
+            pygame.time.wait(1000)
             drawTriFract(screen, triangle, i)
             pygame.display.update()
 
