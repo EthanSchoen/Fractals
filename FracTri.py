@@ -6,7 +6,6 @@ def drawTri(screen, pointList):
 
 def drawTriFract(screen, tri, layers):
     layers -= 1
-    pygame.display.update()
 
     pA = tri[0]
     pB = tri[1]
@@ -50,6 +49,7 @@ def main():
 
         if not maxV:
             drawTriFract(screen, triangle, i)
+            pygame.display.update()
 
         pygame.display.update()
 
